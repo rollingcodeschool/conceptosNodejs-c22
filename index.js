@@ -18,7 +18,12 @@ console.log('nueva prueba')
 // diseñamos los endpoints
 // http://localhost:3000/api/saludo
 app.get('/api/saludo', (req, res)=>{
-    res.json('Bienvenidos a nuestro backend')
+    const vehiculos = ['🏎️', '🚗', '🚕']
+    
+    res.json({
+        mensaje: 'Bienvenidos a nuestro backend',
+        vehiculos
+    })
 })
 
 app.get('/api/adios', (req, res)=>{
